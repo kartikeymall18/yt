@@ -98,6 +98,10 @@ def main() -> int:
         parser.error(f"Music file not found: {music}")
     if sound_effect and not sound_effect.exists():
         parser.error(f"Sound effect file not found: {sound_effect}")
+    if not 0.0 <= args.music_volume <= 1.0:
+        parser.error("Music volume must be between 0.0 and 1.0")
+    if args.sfx_duration <= 0:
+        parser.error("SFX duration must be a positive number")
 
     ensure_ffmpeg_tools()
 

@@ -10,7 +10,15 @@ Simple YouTube shorts automation that combines multiple clips, applies video pol
 ## Usage
 
 ```bash
-python /home/runner/work/yt/yt/yt_automation.py \
+python yt_automation.py \
+  /absolute/path/clip1.mp4 /absolute/path/clip2.mp4 /absolute/path/clip3.mp4 \
+  --output /absolute/path/final_video.mp4
+```
+
+### Usage with optional music and transition SFX
+
+```bash
+python yt_automation.py \
   /absolute/path/clip1.mp4 /absolute/path/clip2.mp4 /absolute/path/clip3.mp4 \
   --music /absolute/path/background.mp3 \
   --sound-effect /absolute/path/whoosh.wav \
